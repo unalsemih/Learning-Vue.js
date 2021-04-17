@@ -14,7 +14,7 @@
         <button>{{buttonTitle}}</button>
         <p>{{details}}</p>
         <p v-html="details"></p>
-        <a v-bind:href="link">LİNK</a>
+        <a v-bind:href="link" v-bind:data-id="dataId">LİNK</a>
     </div>
     <script>
         new Vue({
