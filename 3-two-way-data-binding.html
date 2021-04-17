@@ -10,33 +10,19 @@
 
 <body>
     <div id="app">
-        <input type="text" @keypress.enter="keyp($event)">
-        <button v-on:click="increment">Arttır</button>
-        
-        <!--
-            <input type="text" @keypress="keyp($event)">
-            <button @:click="increment">Arttır</button>
-        -->
-
-        <p>{{number}}</p>
+        <input type="text" v-model="number">
+        <button @click="increment">Arttır</button>
+        <p>{{ number }}</p>
     </div>
     <script>
         new Vue({
             el: "#app",
             data: {
                 number: 0
-
             },
             methods: {
                 increment: function () {
                     this.number++;
-                },
-                keyp: function (e) {
-                    if(e.keyCode === 13) {
-                        this.number += parseInt(e.target.value);
-
-                        //console.log(e.target.value);
-                    }
                 }
             }
         });
