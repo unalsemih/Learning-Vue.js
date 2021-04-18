@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js | İlk Deneme</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<style>
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        margin-bottom: 10px;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <div class="box" :class="className"></div>
+        <div class="box" :class="className"></div>
+        <div class="box" :style="{'background-color' : 'black'}"></div>
+        <button @click="showBlue = !showBlue;">Değiştir</button>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                showBlue: false
+            },
+            computed: {
+                className: function () {
+                    return {
+                        'blue': this.showBlue
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

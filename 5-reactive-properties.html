@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <input type="text" v-model="age">
-        <p>Javascript : {{ age>=18 ? 'Reşittir' : 'Reşit Değildir..' }}</p>
+        <p>Javascript : {{ age>=18 ? 'Reşittir' : 'Reşit Değildir.' }}</p>
         <p>Method : {{ ageWriter() }}</p>
         <p>Computed : {{ ageWriterComp }}</p>
         <hr>
@@ -28,17 +28,17 @@
             methods: {
                 ageWriter: function () {
                     console.log('Method Çalıştı..');
-                    return this.age >= 18 ? 'Reşittir' : 'Reşit Değildir..';
+                    return this.age >= 18 ? 'Reşittir' : 'Reşit Değildir.';
                 }
             },
             computed: {
                 ageWriterComp: function () {
                     console.log('Computed Çalıştı..');
-                    return this.age >= 18 ? 'Reşittir' : 'Reşit Değildir..';
+                    return this.age >= 18 ? 'Reşittir' : 'Reşit Değildir.';
                 }
             },
             watch: {
-                age: function(newValue, oldValue){
+                age: function (newValue, oldValue) {
                     console.log(value1, value2);
                 }
             }
